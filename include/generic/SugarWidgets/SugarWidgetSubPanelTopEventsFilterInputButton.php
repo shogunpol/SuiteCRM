@@ -5,7 +5,8 @@ require_once('include/generic/SugarWidgets/SugarWidgetSubPanelTopButton.php');
 
 class SugarWidgetSubPanelTopEventsFilterInputButton extends SugarWidgetSubPanelTopButton
 {
-    function display(&$widget_data) {
+
+    function display5(&$widget_data) {
 
         global $app_strings;
         $subpanel_definition = $widget_data['subpanel_definition'];
@@ -28,5 +29,17 @@ class SugarWidgetSubPanelTopEventsFilterInputButton extends SugarWidgetSubPanelT
 EOHTML;
         return $button;
 
+    }
+
+
+    function display($defines, $additionalFormFields = NULL, $nonbutton = false)
+    {
+        global $app_strings;
+
+        $button = "<script src='include/SubPanel/DelegatesSubPanel.js'></script>";
+        $id = ($_REQUEST['record']?$_REQUEST['record']:'');
+        $button .= "<input class='button' type='button'  value='".$app_strings['LBL_SUBPANEL_FILTER_LABEL']."'  id='". $this->getWidgetId() ."'  name='".$app_strings['LBL_SUBPANEL_FILTER_LABEL']."'  title='".$app_strings['LBL_SUBPANEL_FILTER_LABEL']."' onclick=\"showSearchPanel('delegates', '" . $id . "');return false;\" />";
+
+        return $button;
     }
 }

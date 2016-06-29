@@ -3,7 +3,7 @@ if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 $GLOBALS['log']->debug('delegates filter subpanel');
 include_once('include/SubPanel/SubPanel.php');
 
-$GLOBALS['sugar_config']['enable_action_menu']=false;
+//$GLOBALS['sugar_config']['enable_action_menu']=false;
 global $db;
 if(empty($_REQUEST['module'])) {
     die("'module' was not defined");
