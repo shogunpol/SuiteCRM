@@ -290,7 +290,6 @@ $dictionary['FP_events'] = array(
                 'options' => 'fp_event_status_dom',
                 'importable' => 'false',
             ),
-        +
         'fp_events_prospects_1' =>
             array(
                 'name' => 'fp_events_prospects_1',
