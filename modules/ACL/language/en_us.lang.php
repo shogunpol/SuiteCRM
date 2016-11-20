@@ -54,6 +54,6 @@ $mod_strings = array (
 'LBL_REDIRECT_TO_HOME'=>'Redirect to Home in',
 'LBL_SECONDS'=>'seconds',
 'LBL_ADDING'=>'Adding for ',
-
+'LBL_JTest'=>'==========JBtest=============',
 )
 ?>
